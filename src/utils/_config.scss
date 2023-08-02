@@ -1,0 +1,35 @@
+@mixin flex($align: false, $justify: false, $gap: false, $direction: false) {
+  display: flex;
+
+  @if($align) {
+    align-items: $align;
+  }
+  @if($justify) {
+    justify-content: $justify;
+  }
+  @if($gap) {
+    gap: $gap;
+  }
+  @if($direction) {
+    flex-direction: $direction;
+  }
+}
+@mixin font($size: false, $line-height: false, $weight: false, $color: false) {
+  @if($size) {
+    font-size: $size;
+  }
+  @if($line-height) {
+    line-height: $line-height;
+  }
+  @if($weight) {
+    font-weight: $weight;
+  }
+  @if($color) {
+    color: $color;
+  }
+}
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
